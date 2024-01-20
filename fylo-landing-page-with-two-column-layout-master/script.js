@@ -4,8 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add your other actions here
 });
 
-// Check the email
+const submitBtns = document.querySelectorAll("input[type='submit']");
+submitBtns.forEach(function (btn) {
+    btn.addEventListener("click", function(event) {
+        event.preventDefault();
+    });
+});
 
+// Check the email
 const inputEmail = document.getElementById("email");
 const submitBtn = document.getElementById("submitBtn");
 const emailInfo = document.getElementById("email-info");
